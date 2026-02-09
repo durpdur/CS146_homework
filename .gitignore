@@ -1,0 +1,16 @@
+# ===== Maven =====
+target/
+*.log
+
+# ===== Java =====
+*.class
+
+# ===== VS Code =====
+.vscode/
+
+# ===== OS files =====
+.DS_Store
+Thumbs.db
+
+# ===== Maven Wrapper =====
+.mvn/wrapper/maven-wrapper.jar
