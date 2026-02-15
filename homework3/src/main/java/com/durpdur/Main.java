@@ -19,6 +19,12 @@ class MaxHeap {
         this.n = arr.length;
     }
 
+    public void buildMaxHeap() {
+        for (int i = n / 2 - 1; i >= 0; i--) {
+            maxHeapify(i);
+        }
+    }
+
     private void maxHeapify(int i) {
         int largest = i;
         int left = 2 * i + 1;
@@ -40,8 +46,13 @@ class MaxHeap {
             maxHeapify(largest);
         }
     }
-}
 
+    public void printHeap() {
+        for (WordFreq wf : arr) {
+            System.out.println(wf.word + " - " + wf.frequency);
+        }
+    }
+}
 
 public class Main {
     public static void main(String[] args) {
@@ -58,6 +69,8 @@ public class Main {
             new WordFreq("visit the store", 700)
         };
 
-        
+        MaxHeap heap = new MaxHeap(customerSurveyData);
+        heap.buildMaxHeap();
+        heap.printHeap();
     }
 }
