@@ -47,11 +47,6 @@ class MaxHeap {
         }
     }
 
-    public void printHeap() {
-        for (WordFreq wf : arr) {
-            System.out.println(wf.word + " - " + wf.frequency);
-        }
-    }
 }
 
 public class Main {
@@ -71,6 +66,5 @@ public class Main {
 
         MaxHeap heap = new MaxHeap(customerSurveyData);
         heap.buildMaxHeap();
-        heap.printHeap();
     }
 }
